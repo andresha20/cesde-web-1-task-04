@@ -1,4 +1,3 @@
-
 const runScript = (e) => {
     const empleados =  [
         {nombre:"pedro", salario:5000000, profesión: "Abogado"} ,
@@ -96,17 +95,18 @@ const runScript = (e) => {
                 let cantidad = parseInt(prompt('Cantidad'));
                 let totalAPagar = cantidad * precio;
                 totalSale += totalAPagar;
-                object3[i] = { producto, precio, cantidad, totalAPagar }
+                object3[i] = { producto, precio, cantidad, totalAPagar };
             }
             totalWithIVA = totalSale * 1.19;
-            console.log(totalWithIVA)
-            console.log(object3)
+            console.log(totalWithIVA);
+            console.log(object3);
+            break;
         case 9:
             Object.keys(cupones).forEach((key) => {
                 cupones[key]['name'] = cupones[key]['cupon'];
                 delete cupones[key]['cupon'];
             })
-            console.log(cupones)
+            console.log(cupones);
             break;
         case 10:
             let dateNow = new Date();
@@ -114,11 +114,11 @@ const runScript = (e) => {
                 let caducidad = cupones[key]['fecha_caducidad'];
                 let split = caducidad.split('-');
                 let fixedDate = `${split[2]}-${split[1]}-${split[0]}`;
-                console.log(fixedDate)
-                console.log(new Date(fixedDate))
-                console.log(dateNow)
+                console.log(fixedDate);
+                console.log(new Date(fixedDate));
+                console.log(dateNow);
                 let days = (new Date(fixedDate) - dateNow) / (1000 * 60 * 60 * 24);
-                console.log(`Faltan ${Math.round(days)} días para caducar.`)
+                console.log(`Faltan ${Math.round(days)} días para caducar.`);
             })
             break;
 
